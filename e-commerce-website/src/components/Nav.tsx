@@ -13,7 +13,7 @@ const Nav = () => {
     }
 
   return (
-    <nav className=''>
+    <nav>
         <div className="mx-auto py-1 bg-black">
             <p className='text-white text-center text-sm md:text-base'>Sign up and get 20% off to your first order. <span className='font-semibold underline'>Sign Up</span></p>
         </div>
