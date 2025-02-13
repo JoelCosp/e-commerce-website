@@ -17,6 +17,7 @@ import './App.css'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
 import Products from './components/Products'
+import Browse from './components/Browse'
 
 function App() {
   
@@ -83,6 +84,7 @@ function App() {
         <hr className='max-w-[250px] sm:max-w-[700px] mx-auto border-gray-300 my-[110px]' />
       </div>
       <Products title="TOP SELLING" products={products2} />
+      <Browse />
     </>
   )
 }
