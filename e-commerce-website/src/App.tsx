@@ -2,6 +2,8 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import Tshirt from './assets/tshirt.jpg'
 import SkinnyJeans from './assets/skinnyJeans.jpg'
 import CheckeredShirt from './assets/checkeredShirt.jpg'
@@ -78,14 +80,30 @@ function App() {
 
   return (
     <>
-      <Nav />
-      <Hero />
-      <Products title="NEW ARRIVALS" products={products1} />
-      <div className='max-w-[1240px] mx-auto'>
-        <hr className='max-w-[250px] sm:max-w-[700px] mx-auto border-gray-300 my-[110px]' />
-      </div>
-      <Products title="TOP SELLING" products={products2} />
-      <Browse />
+      <BrowserRouter 
+        future={{
+          v7_startTransition: true,
+        }}>
+        <Nav />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero />
+                <Products title="NEW ARRIVALS" products={products1} />
+                <div className='max-w-[1240px] mx-auto'>
+                <hr className='max-w-[250px] sm:max-w-[700px] mx-auto border-gray-300 my-[110px]' />
+                </div>
+                <Products title="TOP SELLING" products={products2} />
+                <Browse />
+              </>
+            }
+          />
+          <Route path='/new-arrivals' element={<Products title="NEW ARRIVALS" products={products1} />}/>
+          <Route path='/top-selling' element={<Products title="TOP SELLING" products={products2} />}/>
+        </Routes>
+      </BrowserRouter>
       <Footer />
     </>
   )

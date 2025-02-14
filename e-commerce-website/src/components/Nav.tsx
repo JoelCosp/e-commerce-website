@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 
 import { Menu, Search, ShoppingCart, User, ChevronDown, ShoppingBag, Tag, PackageCheck, Building2  } from 'lucide-react';
 
@@ -20,14 +21,14 @@ const Nav = () => {
         <div className="max-w-[1240px] mx-auto flex justify-between py-5 px-5">
             <div className='flex content-center justify-center items-center'>
                 <button onClick={toggleNav}><Menu className='mr-1 block sm:hidden' size={25}/></button>
-                <p className='font-black text-3xl mx-1'>React.</p>   
+                <p className='font-black text-3xl mx-1'><Link to="/">React.</Link></p>   
             </div>
             <div className='flex content-center justify-center items-center hidden sm:block'>
                 <ul className='flex'>
                     <li className='mx-5 flex font-semibold content-center justify-center items-center hover:cursor-pointer'>Shop <ChevronDown color="#000000" size={20}/></li>
                     <li className='mx-5 font-semibold hover:cursor-pointer'>On Sale</li>
-                    <li className='mx-5 font-semibold hover:cursor-pointer'>New Arrivals</li>
-                    <li className='mx-5 font-semibold hover:cursor-pointer'>Brands</li>
+                    <li className='mx-5 font-semibold hover:cursor-pointer'><Link to="/new-arrivals">New Arrivals</Link></li>
+                    <li className='mx-5 font-semibold hover:cursor-pointer'><Link to="/top-selling">Top Selling</Link></li>
                 </ul>
             </div>
             <div className='flex content-center justify-center items-center'>

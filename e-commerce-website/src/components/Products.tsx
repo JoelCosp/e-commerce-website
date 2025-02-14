@@ -19,7 +19,7 @@ const Products: React.FC<ProductsProps> = ({ title, products }) => {
         <h2 className='font-black text-center mb-4 mt-[50px] sm:text-5xl text-3xl'>{ title }</h2>
         <div className='max-w-[1240px] mx-auto flex justify-between grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3'>
             {products.map((product) => (
-            <Card key={product.name} product={product} />
+                <Card key={product.name} product={product} />
             ))}
         </div>
         <div className='max-w-[1240px] mx-auto flex justify-center px-5'>
