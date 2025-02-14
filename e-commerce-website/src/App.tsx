@@ -18,6 +18,7 @@ import Nav from './components/Nav'
 import Hero from './components/Hero'
 import Products from './components/Products'
 import Browse from './components/Browse'
+import Footer from './components/Footer'
 
 function App() {
   
@@ -85,6 +86,7 @@ function App() {
       </div>
       <Products title="TOP SELLING" products={products2} />
       <Browse />
+      <Footer />
     </>
   )
 }
